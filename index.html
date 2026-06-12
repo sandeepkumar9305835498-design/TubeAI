@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TubeAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 TubeAI</h1>
+
+        <input type="text" id="topic" placeholder="Enter Topic">
+
+        <br><br>
+
+        <select id="length">
+            <option value="short">📱 Short Script</option>
+            <option value="medium">🎬 Medium Script</option>
+            <option value="long">📖 Long Script</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="generateScript()">
+            🎬 Generate Script
+        </button>
+
+        <button onclick="generateTitle()">
+            🔥 Generate Title
+        </button>
+
+        <button onclick="generateThumbnail()">
+            🖼️ Generate Thumbnail Prompt
+        </button>
+
+        <button onclick="generateChatGPT()">
+            🤖 ChatGPT Mode
+        </button>
+
+        <button onclick="generateGemini()">
+            💎 Gemini Mode
+        </button>
+
+        <button onclick="generateDescription()">
+            📝 Generate Description
+        </button>
+
+        <button onclick="generateHashtags()">
+            #️⃣ Generate Hashtags
+        </button>
+       <button onclick="toggleTheme()">
+    🌙 Toggle Theme
+</button>
+        <br><br>
+
+        <div id="output"></div>
+    </div>
+
+    <h2>📜 History</h2>
+
+    <div id="history"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
