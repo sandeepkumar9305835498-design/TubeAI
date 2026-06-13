@@ -259,3 +259,52 @@ function toggleTheme(){
 document.body.classList.toggle("light-mode");
 
 }
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+
+function showGame(game) {
+  document.getElementById("guessGame").style.display = "none";
+  document.getElementById("rpsGame").style.display = "none";
+
+  if (game === "guess") {
+    document.getElementById("guessGame").style.display = "block";
+  }
+
+  if (game === "rps") {
+    document.getElementById("rpsGame").style.display = "block";
+  }
+}
+
+function checkGuess() {
+  let guess = Number(document.getElementById("guessInput").value);
+
+  if (guess < secretNumber) {
+    document.getElementById("guessResult").innerText = "📉 Too Low!";
+  } else if (guess > secretNumber) {
+    document.getElementById("guessResult").innerText = "📈 Too High!";
+  } else {
+    document.getElementById("guessResult").innerText = "🎉 Correct!";
+    secretNumber = Math.floor(Math.random() * 100) + 1;
+  }
+}
+
+function playRPS(userChoice) {
+  let choices = ["rock", "paper", "scissors"];
+  let aiChoice = choices[Math.floor(Math.random() * 3)];
+
+  let result = "";
+
+  if (userChoice === aiChoice) {
+    result = "🤝 Draw!";
+  } else if (
+    (userChoice === "rock" && aiChoice === "scissors") ||
+    (userChoice === "paper" && aiChoice === "rock") ||
+    (userChoice === "scissors" && aiChoice === "paper")
+  ) {
+    result = "🏆 You Win!";
+  } else {
+    result = "😢 You Lose!";
+  }
+
+  document.getElementById("rpsResult").innerText =
+    "AI chose " + aiChoice + " - " + result;
+}
