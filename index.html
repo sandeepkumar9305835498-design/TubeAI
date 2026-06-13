@@ -61,6 +61,26 @@
     <div id="history"></div>
 
     <script src="script.js"></script>
+<h2>🎮 Games</h2>
 
+<button onclick="showGame('guess')">Number Guess</button>
+<button onclick="showGame('rps')">Rock Paper Scissors</button>
+
+<div id="guessGame" style="display:none;">
+  <h3>🎯 Number Guess</h3>
+  <input type="number" id="guessInput" placeholder="1-100">
+  <button onclick="checkGuess()">Guess</button>
+  <p id="guessResult"></p>
+</div>
+
+<div id="rpsGame" style="display:none;">
+  <h3>✂️ Rock Paper Scissors</h3>
+
+  <button onclick="playRPS('rock')">🪨 Rock</button>
+  <button onclick="playRPS('paper')">📄 Paper</button>
+  <button onclick="playRPS('scissors')">✂️ Scissors</button>
+
+  <p id="rpsResult"></p>
+</div>
 </body>
 </html>
