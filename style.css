@@ -91,3 +91,29 @@ button:hover{
     background:#dddddd;
     color:#000000;
 }
+/* 📱 मोबाइल के लिए स्पेशल स्टाइलिंग */
+@media (max-width: 600px) {
+    
+    /* बटन्स को मोबाइल में दो-दो की लाइन में और बड़ा करने के लिए */
+    .button-container, .grid-container, div containing buttons { 
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* एक लाइन में सिर्फ 2 बटन */
+        gap: 10px !important;
+        padding: 5px;
+    }
+
+    button {
+        width: 100% !important;
+        padding: 12px 8px !important; /* बटन थोड़े मोटे हो जाएंगे ताकि दबाने में आसानी हो */
+        font-size: 13px !important; /* टेक्स्ट साफ़ दिखेगा */
+    }
+
+    /* हिस्ट्री लिस्ट को सही से बाएं (Left) संरेखित करने के लिए */
+    .history-box, #historyContainer, .history-list {
+        text-align: left !important;
+        padding-left: 20px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
